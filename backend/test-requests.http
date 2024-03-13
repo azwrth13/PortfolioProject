@@ -1,0 +1,82 @@
+### CREATE five documents.
+POST http://localhost:3000/options HTTP/1.1
+content-type: application/json
+
+{
+    "ticker": "TSLA",
+    "strikePrice": 250.00,
+    "expiration": "12-25-23"
+}
+
+
+### CREATE 2
+POST http://localhost:3000/options HTTP/1.1
+content-type: application/json
+
+{
+    "ticker": "AAPL",
+    "strikePrice": 200.00,
+    "expiration": "12-25-23"
+}
+
+### CREATE 3
+POST http://localhost:3000/options HTTP/1.1
+content-type: application/json
+
+{
+    "ticker": "NVDA",
+    "strikePrice": 480.00,
+    "expiration": "12-25-23"
+}
+
+### CREATE 4
+POST http://localhost:3000/options HTTP/1.1
+content-type: application/json
+
+{
+    "ticker": "AMD",
+    "strikePrice": 140.00,
+    "expiration": "12-25-23"
+}
+
+### CREATE 5
+POST http://localhost:3000/options HTTP/1.1
+content-type: application/json
+
+{
+    "ticker": "INTC",
+    "strikePrice": 45.00,
+    "expiration": "12-25-23"
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/options HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/options/65781e19abfecb693a69fdc6 HTTP/1.1
+
+
+### UPDATE one document's strikePrice, by ID.
+### Replace the ID in the following request with one that exists
+### and update the strikePrice:
+PUT http://localhost:3000/options/65781f40c0d3500610ffd3be HTTP/1.1
+content-type: application/json
+
+{
+    "ticker": "AMD",
+    "strikePrice": 135.00,
+    "expiration": "12-25-23"
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/options/65781f40c0d3500610ffd3be HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/options HTTP/1.1
+

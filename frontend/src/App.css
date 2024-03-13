@@ -1,0 +1,516 @@
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+/*   ----- Imports  -----  */
+/* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */
+/* @import "component1.css";   Component-specific stylesheets, if any.   */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,600&family=DM+Serif+Display&display=swap");
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+/*   ----- Variables  -----  */
+:root {
+  --softBlack: #262526ba;
+  --lilac: #9b7dc9;
+  --lilacOp: #0a090b58;
+  --pink: #ea7472;
+  --pinkOp: #ea747228;
+  --blue: #63639a;
+  --softOrange: #ffdbc6;
+  --softerOrange: #ffdbc6b0;
+  --bgPic: url("images/backround_bright_colors_of_sky.jpg");
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+body {
+  transition: background-color 0.5s ease;
+  font-family: "DM Sans", sans-serif;
+  background-image: var(--bgPic);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--softOrange);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+}
+
+/*  ----- Page layout blocks -----  */
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--softBlack);
+}
+
+header h1 {
+  color: var(--softOrange);
+  font-family: "DM Serif Display", serif;
+  margin-left: 15px;
+}
+
+main {
+  padding: 20px;
+  background-color: var(--softBlack);
+}
+
+.mainSection, .homeSection {
+  background-color: var(--softBlack);
+  border: 1px solid;
+  border-color: var(--pinkOp);
+  padding: 1px 5px;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+.List {
+  background-color: var(--softBlack);
+  border: 1px solid;
+  border-color: var(--pinkOp);
+  padding: 10px 5px;
+  margin: 5px 5px;
+  border-radius: 5px;
+}
+
+section {
+}
+article {
+  margin: 1px;
+  padding: 10px;
+}
+#contactP {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+#orderP {
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+
+#topic1 {
+}
+#topic2 {
+}
+.addButton{
+  margin: auto;
+  padding-left: 97px;
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+div {
+}
+aside {
+}
+footer {
+  background-color: var(--softBlack);
+  padding: 10px 20px;
+  color: var(--softOrange);
+  text-align: center;
+}
+
+/* ----- Anchors ----- Text links */
+a {
+  text-decoration: none;
+  color: var(--softOrange);
+  transition: color 0.3s;
+}
+a:link {
+}
+.hoverButton{
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--lilac);
+}
+a:active {
+}
+a:visited {
+}
+
+/*  ----- Navigation ----- Override text links for navigation only.  */
+.pages {
+  display: flex;
+  justify-content: center; /* Centered the navigation links */
+  flex-wrap: wrap;
+  background-color: var(--softBlack); /* Reduced the opacity for softer black */
+}
+
+.pages a {
+  display: block;
+  color: var(--softOrange);
+  font-size: x-large;
+  font-weight: 400;
+  text-align: center;
+  padding: 1px 5px;
+  margin: 5px;
+  background-color: var(--softBlack);
+  transition: background-color 0.3s;
+  border-radius: 7px;
+}
+
+.pages a:hover {
+  background-color: var(--softOrange);
+  color: var(--softBlack);
+}
+
+nav.local {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+nav.local a {
+  color: var(--softBlack);
+  background-color: var(--softOrange);
+  font-size: large;
+  font-weight: 400;
+  padding: 1px 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--softBlack);
+  transition: background-color 0.3s;
+}
+
+nav.local a:hover {
+  background-color: rgba(0, 0, 0, 0);
+  color: var(--softOrange);
+  border: 1px solid var(--softOrange);
+}
+
+nav {
+}
+nav a {
+}
+nav a:hover {
+}
+
+/*  -----  Typography  ----- */
+p {
+}
+br {
+}
+ol,
+ul,
+dl {
+}
+li {
+}
+dt {
+}
+dd {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: flex;
+  justify-content: center;
+}
+h2,
+h3 {
+  color: var(--pink);
+  font-family: "DM Serif Display", serif;
+}
+h1 {
+}
+h2 {
+}
+h3 {
+}
+h4 {
+}
+h5 {
+}
+h6 {
+}
+
+abbr {
+}
+acronym {
+}
+address {
+}
+blockquote {
+}
+q {
+}
+cite {
+}
+em {
+}
+hr {
+}
+mark {
+}
+s {
+}
+span {
+}
+strong {
+}
+sub {
+}
+sup {
+}
+time {
+}
+
+/*  ----- Coding or instructional typography ----- */
+pre {
+}
+code {
+}
+kbd {
+}
+samp {
+}
+var {
+}
+del {
+}
+ins {
+}
+
+/*  ----- Table ----- */
+table {
+  /*margin: auto;             /*  Centers List in Options */
+  border-collapse: collapse;
+  overflow: auto;
+}
+caption {
+  caption-side: top; 
+  text-align: center;
+}
+thead {
+  border-bottom: 2px solid var(--pink);
+}
+tbody {
+  border-bottom: 2px solid var(--pink);
+}
+tfoot {
+}
+tr {
+  
+}
+tr:nth-child(even) {
+}
+th {
+  padding: 10px;
+}
+td {
+  padding: 3px 25px;
+}
+td:nth-child(1) {
+}
+colgroup {
+}
+data {
+}
+datalist {
+}
+
+/*  ----- Form ----- */
+form {
+  display: flex;
+  justify-content: center;
+}
+form textarea {
+  width: 300px;
+  height: 100px;
+  margin: auto 25px;
+  box-sizing: border-box;
+}
+fieldset {
+  color: var(--softOrange);
+  font-size: larger;
+  background-color: var(--softBlack);
+  border: 2px solid var(--lilac);
+  border-radius: 5px;
+  margin: 10px;
+}
+legend {
+  text-align: left;
+  background-color: var(--softBlack);
+  color: var(--pink);
+  font-size: x-large;
+  border: 2px solid var(--lilac);
+  border-radius: 5px;
+  padding: 3px 5px;
+  margin: 5px;
+}
+label {
+  display: block;
+}
+button {
+  float: right;
+  padding: 5px;
+  font-size: large;
+  font-weight: 400;
+  background-color: var(--softOrange);
+  border: 2px solid var(--softBlack);
+  border-radius: 5px 5px;
+}
+::placeholder {
+  color: var(--softBlack);
+}
+input {
+}
+select {
+}
+optgroup {
+}
+option {
+}
+textarea {
+}
+output {
+}
+meter {
+}
+progress {
+}
+
+/* ----- Media ----- */
+.logo {
+  width: 50px;
+  height: auto;
+}
+figure {
+}
+figcaption {
+}
+figure img {
+}
+svg {
+}
+picture {
+}
+source {
+}
+iframe {
+}
+video {
+}
+audio {
+}
+embed {
+}
+object {
+}
+
+/*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
+.image-gallery-description { 
+  bottom:0px!important; 
+  margin: 5px!important;
+  background-color: var(--pinkOp)!important;
+  border: 1px solid!important;
+  border-color: var(--lilacOp)!important;
+  border-radius: 5px!important;
+} 
+.image-gallery-slide { margin-bottom:80px!important; } 
+
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.gallery figure {
+  width: calc(40% - 1.5%);
+  margin: 0.75%;
+  padding: 0;
+  background-color: var(--pinkOp);
+  border: 1px solid;
+  border-color: var(--lilacOp);
+  border-radius: 5px;
+  text-align: center;
+  font-size: larger;
+}
+
+.gallery img {
+  max-width: 80%;
+  width: 80%;
+  margin: 5% auto;
+  height: auto;
+  display: block;
+  border: 1px solid var(--softBlack);
+  border-radius: 5px;
+}
+
+.gallery figcaption {
+  display: block;
+  padding: 5px;
+}
+
+.floatright {
+}
+.floatleft {
+}
+.center-middle {
+}
+
+.ten {
+}
+.twenty {
+}
+.thirty {
+}
+.forty {
+}
+.fifty {
+}
+.sixty {
+}
+.seventy {
+}
+.eighty {
+}
+
+.radius {
+}
+.circle {
+}
+.boxshadow {
+}
+.tshadow {
+}
+.gradient {
+}
+.shape {
+}
+
+.icn{
+  margin: 5px;
+}
+.nvIcn{
+  padding-right: 5px;
+ vertical-align: -3px;
+}
+
+@keyframes App-logo {
+}
+
+/*   ===== TABLET  media query overrides mobile styles ===== */
+@media all and (min-width: 600px) {
+}
+
+/*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+@media all and (min-width: 1080px) {
+}
+
+/*   ===== PRINT  media query overrides previous styles =====  */
+@media print {
+}
